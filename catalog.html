@@ -13,7 +13,7 @@
             <label>
               <input type="text" placeholder="Поиск по сайту" name="search">
             </label>
-            <input type="button">
+            <input type="button" value="Найти">
           </form>
           <div class="user_block_header">
             <div class="login">
@@ -56,7 +56,134 @@
         </ul>
       </div>
     </header>
-    <main>
+    <main class="center">
+      <h1>Моноподы для селфи</h1>
+      <ul class="breadcrumbs">
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="#">Каталог товаров</a></li>
+        <li>Моноподы для селфи</li>
+      </ul>
+      <div class="main_content">
+        <form action="/echo" method="get" class="filter">
+          <fieldset class="cost">
+            <legend>Стоимость</legend>
+            <div class="range">
+              <div class="range_min">
+                <span class="range_button"></span>
+                <span>от 0</span>
+              </div>
+              <div class="range_max">
+                <span class="range_button"></span>
+                <span>до 5000</span>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset class="color">
+            <legend>Цвет</legend>
+            <input type="checkbox" name="color" value="black" id="black" checked>
+            <label for="black">Черный</label>
+            <input type="checkbox" name="color" value="white" id="white">
+            <label for="white">Белый</label>
+            <input type="checkbox" name="color" value="blue" id="blue" checked>
+            <label for="blue">Синий</label>
+            <input type="checkbox" name="color" value="red" id="red" checked>
+            <label for="red">Красный</label>
+            <input type="checkbox" name="color" value="pink" id="pink">
+            <label for="pink">Розовый</label>
+          </fieldset>
+          <fieldset class="bluetooth">
+            <legend>Bluetooth</legend>
+            <input type="radio" name="bluetooth" value="yes" id="yes" checked>
+            <label for="yes">Есть</label>
+            <input type="radio" name="bluetooth" value="no" id="no">
+            <label for="no">Нет</label>
+          </fieldset>
+          <input type="button" value="Показать" class="yellow">
+        </form>
+        <div class="main_content_right">
+          <form action="/echo" method="get" class="sort">
+            <h3>Сортировка</h3>
+            <fieldset class="type">
+              <input type="radio" name="type" value="item_cost" id="item_cost" checked>
+              <label for="item_cost">По цене</label>
+              <input type="radio" name="type" value="item_type" id="item_type">
+              <label for="item_type">По типу</label>
+              <input type="radio" name="type" value="item_popular" id="item_popular">
+              <label for="item_popular">По популярности</label>
+            </fieldset>
+            <fieldset class="order">
+              <input type="radio" name="order" value="increase" class="increase">
+              <input type="radio" name="order" value="decrease" class="decrease">
+            </fieldset>
+          </form>
+          <div class="price_list">
+            <article class="item">
+              <div class="item_image">
+                <a href="#"><img src="img/item_1.jpg" alt="Любительская селфи-палка"></a>
+                <div class="item_image_hover">
+                  <a href="#" class="yellow">В корзину</a>
+                  <a href="#" class="add_compare">Добавить к стравнению</a>
+                </div>
+              </div>
+              <div class="item_buy">
+                <h2><a href="#">Любительская селфи-палка</a></h2>
+                <a href="#">500 руб.</a>
+              </div>
+            </article>
+            <article class="item">
+              <div class="item_image">
+                <a href="#"><img src="img/item_2.jpg" alt="Профессиональная селфи-палка"></a>
+                <div class="item_image_hover">
+                  <a href="#" class="yellow">В корзину</a>
+                  <a href="#" class="add_compare">Добавить к стравнению</a>
+                </div>
+              </div>
+              <div class="item_buy">
+                <h2><a href="#">Профессиональная селфи-палка</a></h2>
+                <a href="#">1500 руб.</a>
+              </div>
+            </article>
+            <article class="item">
+              <div class="item_image">
+                <a href="#"><img src="img/item_3.jpg" alt="Непотопляемая селфи-палка"></a>
+                <div class="item_image_hover">
+                  <a href="#" class="yellow">В корзину</a>
+                  <a href="#" class="add_compare">Добавить к стравнению</a>
+                </div>
+              </div>
+              <div class="item_buy">
+                <h2><a href="#">Непотопляемая селфи-палка</a></h2>
+                <a href="#">2 500 руб.</a>
+              </div>
+            </article>
+            <article class="item">
+              <div class="item_image">
+                <a href="#"><img src="img/item_4.jpg" alt="Селфи-палка следуй за мной"></a>
+                <div class="item_image_hover">
+                  <a href="#" class="yellow">В корзину</a>
+                  <a href="#" class="add_compare">Добавить к стравнению</a>
+                </div>
+                <div class="new">
+                  <span>New</span>
+                </div>
+              </div>
+              <div class="item_buy">
+                <h2><a href="#">Селфи-палка "Следуй за мной"</a></h2>
+                <a href="#">4 900 руб.</a>
+              </div>
+            </article>
+          </div>
+          <div class="paginator">
+            <span>Назад</span>
+            <div class="page_namber">
+              <span>1</span>
+              <a href="#">2</a>
+              <a href="#">3</a>
+            </div>
+            <span>Вперед</span>
+          </div>
+        </div>
+      </div>
     </main>
     <footer>
       <div class="center">
@@ -69,7 +196,7 @@
               </div>
               <div class="user">
                 <a href="#">Валентин Петухов</a>
-                <a class="logoff">Выйти</a><!-- Ссылка -->
+                <a class="logoff">Выйти</a>
               </div>
             </div>
             <div class="compare">
@@ -94,6 +221,7 @@
             <li><a href="#">ФейсБук</a></li>
             <li><a href="#">Инста</a></li>
             <li><a href="#">Твиттер</a></li>
+          </ul>
           <a href="https://htmlacademy.ru/">htmlacademy</a>
         </div>
       </div>
