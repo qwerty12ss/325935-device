@@ -11,9 +11,9 @@
       <div class="center">
         <p class="logo_footer">Device</p>
         <div class="header_top" >
-          <form action="/echo" method="get" class="search in_bl">
+          <form action="/echo" method="get" class="search in_bl" tabindex="0">
             <label class="in_bl">
-              <input type="text" placeholder="Поиск по сайту" name="search">
+              <input type="text" placeholder="Поиск по сайту" name="search" class="search_area">
             </label>
             <input type="button" value="Найти" class="search_btn in_bl">
           </form>
@@ -36,7 +36,7 @@
         <ul class="header_bottom">
           <li class="in_bl">
             <p>Каталог товаров</p>
-            <div class="catalog ">
+            <div class="catalog">
               <ul class="in_bl">
                 <li><a href="#">Виртуальная реальность</a></li>
                 <li><a href="#">Моноподы для селфи</a></li>
@@ -64,22 +64,22 @@
           <div class="slider_body">
             <span class="slider_number">01</span>
             <h2>Делай селфи, как Бен Стиллер!</h2>
-            <p>
-              Самая длинная палка для селфи доступна в нашем магазине.
-              Восемь (Восемь, Карл) метров длиной и весом всего 5 килограмм.
-            </p>
-            <a href="#" class="yellow">Подробнее</a>
+            <div class-"slider_info">
+              <p>Самая длинная палка для селфи доступна в нашем магазине.</p>
+              <p>Восемь (Восемь, Карл) метров длиной и весом всего 5 килограмм.</p>
+            </div>
+            <a href="#" class="yellow yellow_slider">Подробнее</a>
             <div class="characters">
               <div class="in_bl">
-                <p>8,5 м</p>
+                <p class="characters_info">8,5 м</p>
                 <p class="characters_type">Длина палки</p>
               </div>
               <div class="in_bl">
-                <p>5 кг</p>
+                <p class="characters_info">5 кг</p>
                 <p class="characters_type">Вес палки</p>
               </div>
               <div class="in_bl">
-                <p>Карбон</p>
+                <p class="characters_info">Карбон</p>
                 <p class="characters_type">Материал</p>
               </div>
             </div>
@@ -94,10 +94,10 @@
               Мотивирующие фитнесс-браслеты помогут найти в себе силы
               не пропускать занятия и соблюдать диету
             </p>
-            <a href="#" class="yellow">Подробнее</a>
+            <a href="#" class="yellow yellow_slider">Подробнее</a>
             <div class="characters">
               <div>
-                <p>48 часов</p>
+                <p class="characters_info">48 часов</p>
                 <p class="characters_type">Без подзарядки</p>
               </div>
             </div>
@@ -112,14 +112,14 @@
               Этот обычный, на первый взгляд, квадрокоптер оснащен
               мощным лазером, замаскированным под стандартную камеру.
             </p>
-            <a href="#" class="yellow">Подробнее</a>
+            <a href="#" class="yellow yellow_slider">Подробнее</a>
             <div class="characters">
               <div class="in_bl">
-                <p>800 м</p>
-                <p class="characters_type ">Дальность полета</p>
+                <p class="characters_info">800 м</p>
+                <p class="characters_type">Дальность полета</p>
               </div>
               <div class="in_bl">
-                <p>50 м</p>
+                <p class="characters_info">50 м</p>
                 <p class="characters_type">Радиус поражения</p>
               </div>
             </div>
@@ -171,9 +171,9 @@
           <input type="radio" id="credit">
         </div>
         <div class="service_name">
-          <label for="delivery" class="yellow">Доставка</label>
-          <label for="warranty" class="yellow">Гарантия</label>
-          <label for="credit" class="yellow">Кредит</label>
+          <label for="delivery" class="yellow yellow_service">Доставка</label>
+          <label for="warranty" class="yellow yellow_service">Гарантия</label>
+          <label for="credit" class="yellow yellow_service">Кредит</label>
         </div>
         <div class="service_info">
           <div class="delivery">
