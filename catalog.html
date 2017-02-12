@@ -112,6 +112,7 @@
               <label for="item_popular">По популярности</label>
             </fieldset>
             <fieldset class="order">
+              <!-- input замени на ссылки с текстом внутри них. Иначе не застилизуешь. Или можно после input поставить label и связать их между собой и будешь тогда стилизовать label -->
               <input type="radio" name="order" value="increase" class="increase">
               <input type="radio" name="order" value="decrease" class="decrease">
             </fieldset>
@@ -174,13 +175,13 @@
             </article>
           </div>
           <div class="paginator">
-            <span>Назад</span>
+            <span>Назад</span><!-- это тоже ссылки, но могут быть и не ссылками если мы находимся на первой или последний странице -->
             <div class="page_namber">
               <span>1</span>
               <a href="#">2</a>
               <a href="#">3</a>
             </div>
-            <span>Вперед</span>
+            <span>Вперед</span><!-- это тоже ссылки, но могут быть и не ссылками если мы находимся на первой или последний странице -->
           </div>
         </div>
       </div>

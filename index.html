@@ -9,7 +9,7 @@
   <body>
     <header>
       <div class="center">
-        <p class="logo_footer">Device</p>
+        <p class="logo_header">Device</p>
         <div class="header_top" >
           <form action="/echo" method="get" class="search in_bl" tabindex="0">
             <label class="in_bl">
@@ -58,13 +58,13 @@
       </div>
     </header>
     <main class="center">
-      <div class="slider center">
+      <div class="slider">
         <article class="slider_1 clearfix">
           <a href="#" class="slider_img"><img src="img/slider_1.png" alt="8-ми метровая палка для селфи"></a>
           <div class="slider_body">
             <span class="slider_number">01</span>
             <h2>Делай селфи, как Бен Стиллер!</h2>
-            <div class-"slider_info">
+            <div class="slider_info">
               <p>Самая длинная палка для селфи доступна в нашем магазине.</p>
               <p>Восемь (Восемь, Карл) метров длиной и весом всего 5 килограмм.</p>
             </div>
@@ -128,48 +128,40 @@
       </div>
       <ul class="categories">
         <li class="in_bl">
-          <a href="#">
-            <div class="popular_sprite"></div>
+          <a href="#" class="popular_sprite in_bl">
             <p>Виртуальная реальность</p>
           </a>
         </li>
         <li class="in_bl">
-          <a href="#" class="in_bl">
-            <div class="popular_sprite"></div>
+          <a href="#" class="popular_sprite in_bl">
             <p>Моноподы для селфи</p>
           </a>
         </li>
         <li class="in_bl">
-          <a href="#" class="in_bl">
-            <div class="popular_sprite"></div>
+          <a href="#" class="popular_sprite in_bl">
             <p>Экшн-камеры</p>
           </a>
         </li>
         <li class="in_bl">
-          <a href="#" class="in_bl">
-            <div class="popular_sprite"></div>
+          <a href="#" class="popular_sprite in_bl">
             <p>Фитнесс-браслеты</p>
           </a>
         </li>
         <li class="in_bl">
-          <a href="#" class="in_bl">
-            <div class="popular_sprite"></div>
+          <a href="#" class="popular_sprite in_bl">
             <p>Умные часы</p>
           </a>
         </li>
         <li class="in_bl">
-          <a href="#" class="in_bl">
-            <div class="popular_sprite"></div>
+          <a href="#" class="popular_sprite in_bl">
             <p>Квадрокоптеры</p>
           </a>
         </li>
       </ul>
       <div class="service clearfix">
-        <div class="service_radio">
-          <input type="radio" id="delivery">
-          <input type="radio" id="warranty">
-          <input type="radio" id="credit">
-        </div>
+        <input type="radio" name="service" id="delivery">
+        <input type="radio" name="service" id="warranty">
+        <input type="radio" name="service" id="credit">
         <div class="service_name">
           <label for="delivery" class="yellow yellow_service">Доставка</label>
           <label for="warranty" class="yellow yellow_service">Гарантия</label>
@@ -203,10 +195,10 @@
         </div>
       </div>
       <ul class="promo_logo">
-        <li class="in_bl"><a href="http://www.dji.com/"><img src="img/logo_1.png" alt="dji"></a></li>
-        <li class="in_bl"><a href="http://www.sp-gadgets.com/"><img src="img/logo_2.png" alt="SP Gadgets"></a></li>
-        <li class="in_bl"><a href="https://gopro.com/"><img src="img/logo_3.png" alt="GoPro"></a></li>
-        <li class="in_bl"><a href="https://www.vive.com/ru/"><img src="img/logo_4.png" alt="Vive"></a></li>
+        <li class="in_bl"><a href="http://www.dji.com/"><img src="img/logo_1.jpg" alt="dji"></a></li>
+        <li class="in_bl"><a href="http://www.sp-gadgets.com/"><img src="img/logo_2.jpg" alt="SP Gadgets"></a></li>
+        <li class="in_bl"><a href="https://gopro.com/"><img src="img/logo_3.jpg" alt="GoPro"></a></li>
+        <li class="in_bl"><a href="https://www.vive.com/ru/"><img src="img/logo_4.jpg" alt="Vive"></a></li>
       </ul>
       <div class="main_bottom  clearfix">
         <section class="about_us">
@@ -236,11 +228,11 @@
         </section>
       </div>
       <div class="map_popup">
-        <span class="cross"></span>
+        <button type="button" class="cross">Закрыть</button>
         <img src="img/map_big.jpg" alt="улица Строителей, 15">
       </div>
       <div class="writeus_popup">
-        <span class="cross"></span>
+        <button type="button" class="cross">Закрыть</button>
         <form action="/echo" method="post" class="writeus">
           <div class="popup_head">
             <fieldset class="name">
@@ -268,7 +260,6 @@
                 <a href="#">Войти</a>
               </div>
               <div class="user in_bl">
-                <a href="#">Валентин Петухов</a>
                 <a class="logoff">Выйти</a>
               </div>
             </div>
@@ -281,13 +272,13 @@
           </div>
         </div>
         <div class="footer_middle">
-          <p>г.Москва, ул.Строителей, 15</p>
-          <ul class="nav_footer flex">
-            <li><a href="#">Доставка</a></li>
-            <li><a href="#">Гарантия</a></li>
-            <li><a href="#">Контакты</a></li>
+          <p class="adress in_bl">г.Москва, ул.Строителей, 15</p>
+          <ul class="nav_footer in_bl">
+            <li class="in_bl"><a href="#">Доставка</a></li>
+            <li class="in_bl"><a href="#">Гарантия</a></li>
+            <li class="in_bl"><a href="#">Контакты</a></li>
           </ul>
-          <p>Тел.: +7 (495) 495-95-95</p>
+          <p class="tel in_bl">Тел.: +7 (495) 495-95-95</p>
         </div>
         <div class="footer_bottom">
           <ul class="social flex">
