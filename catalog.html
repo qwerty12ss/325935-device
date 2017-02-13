@@ -3,69 +3,70 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс-Каталог</title>
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-    <header>
+    <header class="catalog_header">
       <div class="center">
-        <a href="index.html" class="logo_footer">Device</a>
-        <div class="header_top">
-          <form action="/echo" method="get" class="search">
-            <label>
-              <input type="text" placeholder="Поиск по сайту" name="search">
+        <p class="logo_header">Device</p>
+        <div class="header_top" >
+          <form action="/echo" method="get" class="search in_bl">
+            <label class="in_bl">
+              <input type="text" placeholder="Поиск по сайту" name="search" class="search_area">
             </label>
-            <input type="button" value="Найти">
+            <input type="button" value="Найти" class="search_btn in_bl">
           </form>
-          <div class="user_block_header">
-            <div class="login">
+          <div class="user_block_header in_bl">
+            <div class="login in_bl">
               <a href="#">Войти</a>
             </div>
-            <div class="user">
+            <div class="user in_bl">
               <a href="#">Валентин Петухов</a>
               <a href="#" class="logoff">Выйти</a>
             </div>
           </div>
-          <div class="compare">
+          <div class="compare in_bl">
             <a href="#">Сравнить</a>
           </div>
-          <div class="cart">
+          <div class="cart in_bl">
             <a href="#">Корзина</a>
           </div>
         </div>
         <ul class="header_bottom">
-          <li>
+          <li class="in_bl">
             <p>Каталог товаров</p>
             <div class="catalog">
-              <ul>
+              <ul class="in_bl">
                 <li><a href="#">Виртуальная реальность</a></li>
                 <li><a href="#">Моноподы для селфи</a></li>
                 <li><a href="#">Экшн-камеры</a></li>
               </ul>
-              <ul>
+              <ul class="in_bl">
                 <li><a href="#">Фитнесс-браслеты</a></li>
                 <li><a href="#">Умные часы</a></li>
               </ul>
-              <ul>
+              <ul class="in_bl">
                 <li><a href="#">Квадрокоптеры</a></li>
               </ul>
             </div>
-            <span class="plus"></span>
            </li>
-           <li><a href="#">Доставка</a></li>
-           <li><a href="#">Гарантия</a></li>
-           <li><a href="#">Контакты</a></li>
+           <li class="in_bl"><a href="#">Доставка</a></li>
+           <li class="in_bl"><a href="#">Гарантия</a></li>
+           <li class="in_bl"><a href="#">Контакты</a></li>
         </ul>
       </div>
     </header>
-    <main class="center">
+    <main class="center clearfix">
       <h1>Моноподы для селфи</h1>
       <ul class="breadcrumbs">
-        <li><a href="index.html">Главная</a></li>
-        <li><a href="#">Каталог товаров</a></li>
-        <li>Моноподы для селфи</li>
+        <li class="in_bl"><a href="index.html">Главная</a></li>
+        <li class="in_bl"><a href="#">Каталог товаров</a></li>
+        <li class="in_bl"><a>Моноподы для селфи</a></li>
       </ul>
-      <div class="main_content">
+      <div class="main_content_left">
         <form action="/echo" method="get" class="filter">
-          <fieldset class="cost">
+          <fieldset class="filter_cost">
             <legend>Стоимость</legend>
             <div class="range">
               <div class="range_min">
@@ -102,66 +103,65 @@
         </form>
         <div class="main_content_right">
           <form action="/echo" method="get" class="sort">
-            <h3>Сортировка</h3>
-            <fieldset class="type">
+            <h3 class="in_bl">Сортировка</h3>
+            <fieldset class="type in_bl">
               <input type="radio" name="type" value="item_cost" id="item_cost" checked>
-              <label for="item_cost">По цене</label>
+              <label for="item_cost" class="in_bl">По цене</label>
               <input type="radio" name="type" value="item_type" id="item_type">
-              <label for="item_type">По типу</label>
+              <label for="item_type" class="in_bl">По типу</label>
               <input type="radio" name="type" value="item_popular" id="item_popular">
-              <label for="item_popular">По популярности</label>
+              <label for="item_popular" class="in_bl">По популярности</label>
             </fieldset>
             <fieldset class="order">
-              <!-- input замени на ссылки с текстом внутри них. Иначе не застилизуешь. Или можно после input поставить label и связать их между собой и будешь тогда стилизовать label -->
-              <input type="radio" name="order" value="increase" class="increase">
-              <input type="radio" name="order" value="decrease" class="decrease">
+              <a class="increase">inc</a>
+              <a class="decrease">dec</a>
             </fieldset>
           </form>
           <div class="price_list">
-            <article class="item">
+            <article class="item in_bl">
               <div class="item_image">
                 <a href="#"><img src="img/item_1.jpg" alt="Любительская селфи-палка"></a>
                 <div class="item_image_hover">
-                  <a href="#" class="yellow">В корзину</a>
+                  <a href="#" class="yellow yellow_item">В корзину</a>
                   <a href="#" class="add_compare">Добавить к стравнению</a>
                 </div>
               </div>
               <div class="item_buy">
-                <h2><a href="#">Любительская селфи-палка</a></h2>
-                <a href="#">500 руб.</a>
+                <h2 class="in_bl"><a href="#">Любительская селфи-палка</a></h2>
+                <a href="#" class="cost in_bl">500 руб.</a>
               </div>
             </article>
-            <article class="item">
+            <article class="item in_bl">
               <div class="item_image">
                 <a href="#"><img src="img/item_2.jpg" alt="Профессиональная селфи-палка"></a>
                 <div class="item_image_hover">
-                  <a href="#" class="yellow">В корзину</a>
+                  <a href="#" class="yellow yellow_item">В корзину</a>
                   <a href="#" class="add_compare">Добавить к стравнению</a>
                 </div>
               </div>
-              <div class="item_buy">
-                <h2><a href="#">Профессиональная селфи-палка</a></h2>
-                <a href="#">1500 руб.</a>
+              <div class="item_buy in_bl">
+                <h2 class="in_bl"><a href="#">Профессиональная селфи-палка</a></h2>
+                <a href="#" class="cost in_bl">1500 руб.</a>
               </div>
             </article>
-            <article class="item">
+            <article class="item in_bl">
               <div class="item_image">
                 <a href="#"><img src="img/item_3.jpg" alt="Непотопляемая селфи-палка"></a>
                 <div class="item_image_hover">
-                  <a href="#" class="yellow">В корзину</a>
+                  <a href="#" class="yellow yellow_item">В корзину</a>
                   <a href="#" class="add_compare">Добавить к стравнению</a>
                 </div>
               </div>
               <div class="item_buy">
-                <h2><a href="#">Непотопляемая селфи-палка</a></h2>
-                <a href="#">2 500 руб.</a>
+                <h2 class="in_bl"><a href="#">Непотопляемая селфи-палка</a></h2>
+                <a href="#" class="cost in_bl">2 500 руб.</a>
               </div>
             </article>
-            <article class="item">
+            <article class="item in_bl">
               <div class="item_image">
                 <a href="#"><img src="img/item_4.jpg" alt="Селфи-палка следуй за мной"></a>
                 <div class="item_image_hover">
-                  <a href="#" class="yellow">В корзину</a>
+                  <a href="#" class="yellow yellow_item">В корзину</a>
                   <a href="#" class="add_compare">Добавить к стравнению</a>
                 </div>
                 <div class="new">
@@ -169,61 +169,60 @@
                 </div>
               </div>
               <div class="item_buy">
-                <h2><a href="#">Селфи-палка "Следуй за мной"</a></h2>
-                <a href="#">4 900 руб.</a>
+                <h2 class="in_bl"><a href="#">Селфи-палка "Следуй за мной"</a></h2>
+                <a href="#" class="cost in_bl">4 900 руб.</a>
               </div>
             </article>
           </div>
           <div class="paginator">
-            <span>Назад</span><!-- это тоже ссылки, но могут быть и не ссылками если мы находимся на первой или последний странице -->
+            <a>Назад</a><
             <div class="page_namber">
-              <span>1</span>
+              <a>1</a>
               <a href="#">2</a>
               <a href="#">3</a>
             </div>
-            <span>Вперед</span><!-- это тоже ссылки, но могут быть и не ссылками если мы находимся на первой или последний странице -->
+            <a href="#">Вперед</a>
           </div>
         </div>
       </div>
     </main>
     <footer>
       <div class="center">
-        <div class="footer_top">
-          <a href="index.html" class="logo_footer">Device</a>
-          <div class="foter_chtoto!!!!!?????????">
-            <div class="user_block_footer">
+        <div class="footer_top clearfix">
+          <p class="logo_footer">Device</p>
+          <div class="foter_chtoto">
+            <div class="user_block_footer in_bl">
               <div class="login">
                 <a href="#">Войти</a>
               </div>
-              <div class="user">
-                <a href="#">Валентин Петухов</a>
+              <div class="user in_bl">
                 <a class="logoff">Выйти</a>
               </div>
             </div>
-            <div class="compare">
+            <div class="footer_compare in_bl">
               <a href="#">Сравнить</a>
             </div>
-            <div class="cart">
+            <div class="footer_cart in_bl">
               <a href="#">Корзина</a>
             </div>
           </div>
         </div>
         <div class="footer_middle">
-          <p>г.Москва, ул.Строителей, 15</p>
-          <ul class="nav_footer">
-            <li><a href="#">Доставка</a></li>
-            <li><a href="#">Гарантия</a></li>
-            <li><a href="#">Контакты</a></li>
+          <p class="adress in_bl">г.Москва, ул.Строителей, 15</p>
+          <ul class="nav_footer in_bl">
+            <li class="in_bl"><a href="#">Доставка</a></li>
+            <li class="in_bl"><a href="#">Гарантия</a></li>
+            <li class="in_bl"><a href="#">Контакты</a></li>
           </ul>
-          <p>Тел.: +7 (495) 495-95-95</p>
+          <p class="tel in_bl">Тел.: +7 (495) 495-95-95</p>
         </div>
         <div class="footer_bottom">
-          <ul class="social">
-            <li><a href="#">ФейсБук</a></li>
-            <li><a href="#">Инста</a></li>
-            <li><a href="#">Твиттер</a></li>
+          <ul class="social in_bl">
+            <li class="in_bl"><a href="#">ФейсБук</a></li>
+            <li class="in_bl"><a href="#">Инста</a></li>
+            <li class="in_bl"><a href="#">Твиттер</a></li>
           </ul>
-          <a href="https://htmlacademy.ru/">htmlacademy</a>
+          <a href="https://htmlacademy.ru/" class="in_bl">htmlacademy</a>
         </div>
       </div>
     </footer>
