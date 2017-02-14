@@ -66,40 +66,38 @@
       </ul>
       <div class="main_content_left">
         <form action="/echo" method="get" class="filter">
+          <h3>Фильтр</h3>
           <fieldset class="filter_cost">
             <legend>Стоимость</legend>
-            <div class="range">
-              <div class="range_min">
-                <span class="range_button"></span>
-                <span>от 0</span>
-              </div>
-              <div class="range_max">
-                <span class="range_button"></span>
-                <span>до 5000</span>
-              </div>
+            <div class="range_filter">
+             <div class="range_controls">
+               <div class="scale">
+                 <div class="bar">
+                   <div class="toggle toggle_min"></div>
+                   <div class="toggle toggle_max"></div>
+                 </div>
+               </div>
+             </div>
+             <div class="price_controls">
+               <label class="min_price">от <input name="min_price" type="text" value="0"></label>
+               <label class="max_price">до <input name="max_price" type="text" value="5000"></label>
             </div>
+           </div>
           </fieldset>
           <fieldset class="color">
             <legend>Цвет</legend>
-            <input type="checkbox" name="color" value="black" id="black" checked>
-            <label for="black">Черный</label>
-            <input type="checkbox" name="color" value="white" id="white">
-            <label for="white">Белый</label>
-            <input type="checkbox" name="color" value="blue" id="blue" checked>
-            <label for="blue">Синий</label>
-            <input type="checkbox" name="color" value="red" id="red" checked>
-            <label for="red">Красный</label>
-            <input type="checkbox" name="color" value="pink" id="pink">
-            <label for="pink">Розовый</label>
+            <label for="black"><input type="checkbox" name="color" value="black" id="black" checked><span class="checkbox_indicator"></span>Черный</label>
+            <label for="white"><input type="checkbox" name="color" value="white" id="white"><span class="checkbox_indicator"></span>Белый</label>
+            <label for="blue"><input type="checkbox" name="color" value="blue" id="blue" checked><span class="checkbox_indicator"></span>Синий</label>
+            <label for="red"><input type="checkbox" name="color" value="red" id="red" checked><span class="checkbox_indicator"></span>Красный</label>
+            <label for="pink"><input type="checkbox" name="color" value="pink" id="pink"><span class="checkbox_indicator"></span>Розовый</label>
           </fieldset>
           <fieldset class="bluetooth">
             <legend>Bluetooth</legend>
-            <input type="radio" name="bluetooth" value="yes" id="yes" checked>
-            <label for="yes">Есть</label>
-            <input type="radio" name="bluetooth" value="no" id="no">
-            <label for="no">Нет</label>
+            <label for="yes"><input type="radio" name="bluetooth" value="yes" id="yes" checked><span class="radio_indicator"></span>Есть</label>
+            <label for="no"><input type="radio" name="bluetooth" value="no" id="no"><span class="radio_indicator"></span>Нет</label>
           </fieldset>
-          <input type="button" value="Показать" class="yellow">
+          <button type="submit" class="yellow yellow_filter">Показать</button>
         </form>
         <div class="main_content_right">
           <form action="/echo" method="get" class="sort">
@@ -122,8 +120,8 @@
               <div class="item_image">
                 <a href="#"><img src="img/item_1.jpg" alt="Любительская селфи-палка"></a>
                 <div class="item_image_hover">
-                  <a href="#" class="yellow yellow_item">В корзину</a>
-                  <a href="#" class="add_compare">Добавить к стравнению</a>
+                  <button class="yellow yellow_item">В корзину</button>
+                  <button class="add_compare">Добавить к стравнению</button>
                 </div>
               </div>
               <div class="item_buy">
@@ -135,12 +133,12 @@
               <div class="item_image">
                 <a href="#"><img src="img/item_2.jpg" alt="Профессиональная селфи-палка"></a>
                 <div class="item_image_hover">
-                  <a href="#" class="yellow yellow_item">В корзину</a>
-                  <a href="#" class="add_compare">Добавить к стравнению</a>
+                  <button class="yellow yellow_item">В корзину</button>
+                  <button class="add_compare">Добавить к стравнению</button>
                 </div>
               </div>
               <div class="item_buy in_bl">
-                <h2 class="in_bl"><a href="#">Профессиональная селфи-палка</a></h2>
+                <h2 class="in_bl"><a href="#">Профессиональная селфи&#8209палка</a></h2>
                 <a href="#" class="cost in_bl">1500 руб.</a>
               </div>
             </article>
@@ -148,8 +146,8 @@
               <div class="item_image">
                 <a href="#"><img src="img/item_3.jpg" alt="Непотопляемая селфи-палка"></a>
                 <div class="item_image_hover">
-                  <a href="#" class="yellow yellow_item">В корзину</a>
-                  <a href="#" class="add_compare">Добавить к стравнению</a>
+                  <button class="yellow yellow_item">В корзину</button>
+                  <button class="add_compare">Добавить к стравнению</button>
                 </div>
               </div>
               <div class="item_buy">
@@ -161,8 +159,24 @@
               <div class="item_image">
                 <a href="#"><img src="img/item_4.jpg" alt="Селфи-палка следуй за мной"></a>
                 <div class="item_image_hover">
-                  <a href="#" class="yellow yellow_item">В корзину</a>
-                  <a href="#" class="add_compare">Добавить к стравнению</a>
+                  <button class="yellow yellow_item">В корзину</button>
+                  <button class="add_compare">Добавить к стравнению</button>
+                </div>
+                <div class="new">
+                  <span>New</span>
+                </div>
+              </div>
+              <div class="item_buy">
+                <h2 class="in_bl"><a href="#">Селфи-палка "Следуй за мной"</a></h2>
+                <a href="#" class="cost in_bl">4 900 руб.</a>
+              </div>
+            </article>
+            <article class="item in_bl">
+              <div class="item_image">
+                <a href="#"><img src="img/item_4.jpg" alt="Селфи-палка следуй за мной"></a>
+                <div class="item_image_hover">
+                  <button class="yellow yellow_item">В корзину</button>
+                  <button class="add_compare">Добавить к стравнению</button>
                 </div>
                 <div class="new">
                   <span>New</span>
@@ -175,13 +189,13 @@
             </article>
           </div>
           <div class="paginator">
-            <a>Назад</a><
-            <div class="page_namber">
-              <a>1</a>
-              <a href="#">2</a>
-              <a href="#">3</a>
+            <a class="paginator_btn back in_bl">Назад</a><
+            <div class="paginator_number in_bl">
+              <a class="active in_bl">1</a>
+              <a href="#" class="in_bl">2</a>
+              <a href="#" class="in_bl">3</a>
             </div>
-            <a href="#">Вперед</a>
+            <a href="#" class="paginator_btn forward in_bl">Вперед</a>
           </div>
         </div>
       </div>

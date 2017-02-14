@@ -232,15 +232,15 @@
           <a class="yellow">Напишите нам</a>
         </section>
       </div>
-      <div class="map_popup">
+      <div class="map_popupp">
         <button type="button" class="cross">Закрыть</button>
         <img src="img/map_big.jpg" alt="улица Строителей, 15">
       </div>
       <div class="writeus_popup">
         <button type="button" class="cross">Закрыть</button>
         <form action="/echo" method="post" class="writeus">
-          <div class="popup_head">
-            <fieldset class="name">
+          <div class="popup_head clearfix">
+            <fieldset class="popup_name">
               <label for="name">Ваше имя:</label>
               <input type="text" placeholder="Представьтесь пожалуйста" name="name" id="name">
             </fieldset>
@@ -249,9 +249,11 @@
               <input type="text" placeholder="Для отправки ответа" name="e-mail" id="e-mail">
             </fieldset>
           </div>
-          <label for="message">Текст письма:</label>
-          <textarea placeholder="В свободной форме" name="message" id="message"></textarea>
-          <input type="submit" value="Отправить" class="yellow">
+          <div class="popup_message">
+            <label for="message">Текст письма:</label>
+            <textarea placeholder="В свободной форме" name="message" id="message"></textarea>
+          </div>
+          <button type="submit" class="yellow yellow_popup">Отправить</button>
         </form>
       </div>
     </main>

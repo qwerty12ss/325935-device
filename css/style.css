@@ -1104,8 +1104,6 @@ footer a {
   opacity: 0.3;
 }
 
-.
-
 .caps {
   text-transform: uppercase;
 }
@@ -1115,6 +1113,7 @@ fieldset {
   padding: 0;
   margin: 0;
 }
+
 
 .catalog_header {
   min-height: 185px;
@@ -1161,13 +1160,222 @@ h1 {
 
 .filter {
   float: left;
-  width: 268px;
+  width: 269px;
+  padding: 0;
+  padding-left: 59px;
+  background-color: #efefef;
+  z-index: -1;
+}
+
+.filter h3 {
+  font-size: 16px;
+  height: 43px;
+  width: 267px;
+  margin: 0;
+  margin-bottom: 69px;
+  padding-left: 2px;
+  padding-top: 27px;
+  background-color: #dbdbdb;
+}
+
+.filter fieldset {
+  width: 202px;
+}
+
+.filter legend {
+  font-size: 18px;
+  font-family: "gilroyextrabold","arial", sans-serif;
+  letter-spacing: 0.01em;
+}
+
+.filter_cost {
+  min-height: 122px;
+  padding: 0;
+  padding-top: 16px;
+  border-bottom: 2px solid #000000;
+  border-top: 2px solid #000000;
+}
+
+.price_controls {
+  font-size: 14px;
+  font-family: "gilroy","arial",sans-serif;
+  color: #cdcdcd;
+}
+
+.price_controls input{
+  width: 50px;
+  font-size: 14px;
+  font-family: "gilroy","arial",sans-serif;
+  color: #cdcdcd;
+  border: 0;
+  padding: 0;
+  background: 0;
+  outline: 0;
+}
+
+.min_price {
+  margin-right: 12px;
+}
+
+.range_controls {
+  width: 100%;
+  height: 14px;
+  padding-top: 6px;
+}
+
+.scale {
+  width: 100%;
+  height: 2px;
+  background-color: #dbdbdb;
+  padding: 0;
+}
+
+.bar {
+  height: 100%;
+  width: 118px;
+  background-color: #91c92f;
+  position: relative;
+}
+
+.toggle {
+  width: 10px;
+  height: 10px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #000000;
+  border-radius: 50%;
+  background-color: #eeeeee;
+  position: absolute;
+  top: 0;
+  transform: translateY(-50%);
+  z-index: 100;
+  cursor: pointer;
+}
+
+.toggle:active {
+  width: 10px;
+  height: 10px;
+  border-style: solid;
+  border-width: 3px;
+  border-color: #ffffff;
+  border-radius: 50%;
+  background-color: #7eae29;
+  position: absolute;
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.75);
+  z-index: 100;
+}
+
+.toggle_max {
+  right: 0;
+}
+
+.color {
+  padding-top: 16px;
+  border-bottom: 2px solid #000000;
+  margin-bottom: 15px;
+}
+
+.color legend {
+  margin-bottom: 30px;
+}
+
+.color label {
+  height: 23px;
+  display: block;
+  padding-left: 41px;
+  margin-bottom: 17px;
+  font-size: 14px;
+  font-family: "opensans", "arial", sans-serif;
+  position: relative;
+  cursor: pointer;
+}
+
+.color input[type="checkbox"] {
+  display: none;
+}
+
+.color input[type="checkbox"]+.checkbox_indicator{
+  width: 23px;
+  height: 23px;
+  background-color: #dbdbdb;
+  display: block;
+  position: absolute;
+  left: 0px;
+}
+
+.color input[type="checkbox"]+.checkbox_indicator:hover{
+  background-color: #cecece;
+}
+
+.color input[type="checkbox"]+.checkbox_indicator:active{
+  background-color: #c4c4c4;
+}
+
+.color input[type="checkbox"]:checked+.checkbox_indicator::after{
+  content: "";
+  display: block;
+  width: 12px;
+  height: 7px;
+  background: url("../img/icon_tick.png") no-repeat;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+}
+
+.bluetooth label {
+  height: 23px;
+  display: block;
+  padding-left: 41px;
+  margin-bottom: 17px;
+  font-size: 14px;
+  font-family: "opensans", "arial", sans-serif;
+  position: relative;
+  cursor: pointer;
+}
+
+.bluetooth input[type="radio"] {
+  display: none;
+}
+
+.bluetooth input[type="radio"]+.radio_indicator {
+  display: block;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #c8c8c8;
+  border-radius: 50%;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 0;
+}
+
+.bluetooth input[type="radio"]+.radio_indicator:hover {
+  border-color: #bcbcbc;
+}
+
+.bluetooth input[type="radio"]+.radio_indicator:active {
+  border-color: #acacac;
+}
+
+.bluetooth input[type="radio"]:checked+.radio_indicator::before {
+  content: "";
+  display: block;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #000000;
+  border-radius: 50%;
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);;
 }
 
 .main_content_right {
   float: left;
-  width: 760px;
-  padding-left: 72px;
+  width: 832px;
 }
 
 h3 {
@@ -1178,11 +1386,12 @@ h3 {
 }
 
 .sort {
-  padding-top: 15px;
-  padding-bottom: 15px;
+  height: 59px;
+  padding-top: 11px;
   font-size: 0px;
-  background-color: #ebebeb;
+  background-color: #efefef;
   margin-bottom: 70px;
+  padding-left: 72px;
 }
 
 .sort h3 {
@@ -1207,6 +1416,7 @@ h3 {
 }
 
 .price_list {
+  margin-left: 72px;
   font-size: 0px;
 }
 
@@ -1226,45 +1436,34 @@ h3 {
   height: 380px;
   margin-bottom: 25px;
   position: relative;
+  text-align: center;
+}
+
+.item_image::before {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(238,238,238,0.7);
+  content: "";
+  z-index: 10;
+  display: none;
 }
 
 .item_image_hover {
-  width: 280px;
-  height: 210px;
-  padding-top: 170px;
-  padding-left: 80px;
   position: absolute;
-  top: 0px;
-  left: 0px;
-  z-index: 50;
-  opacity: 0;
+  display: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 20;
 }
 
-.item_image_hover:hover {
-  width: 280px;
-  height: 210px;
-  padding-top: 170px;
-  padding-left: 80px;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  z-index: 50;
-  opacity: 1;
-  transition: .25s;
-}
-
-.item_image_hover::before {
-  content: "";
+.item_image:hover::before {
   display: block;
-  width: 360px;
-  height: 380px;
-  background-color: #eeeeee;
-  opacity: 0.7;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  z-index: -50;
-  transition: .25s;
+}
+
+.item_image:hover .item_image_hover {
+  display: block;
 }
 
 .item_image_hover > a{
@@ -1273,8 +1472,10 @@ h3 {
 
 .add_compare {
   width: 200px;
-  padding-left: 29px;
   font-size: 13px;
+  border: none;
+  background: none;
+  outline: none;
   font-family: "opensanslight","arial",sans-serif;
   letter-spacing: 0.01em;
   color: #000000;
@@ -1326,26 +1527,214 @@ h3 {
   right: 26px;
   text-align: center;
   opacity: 0.2;
+  z-index: 1349;
 }
 
 .new span {
   color: #000000;
   text-transform: uppercase;
   font-size: 14px;
-  font-family: "gilroyextrabold", "arial",sans-serif;
+  font-family: "gilroyextrabold","arial",sans-serif;
   letter-spacing: 0.05;
+}
+
+.paginator {
+  margin-left: 72px;
+  font-size: 0px;
+  background-color: #ebebeb;
+  font-family: "gilroyextrabold","arial",sans-serif;
+  z-index: -50;
+}
+
+.paginator_btn {
+  height: 43px;
+  width: 200px;
+  padding-right: 30px;
+  padding-left: 30px;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-family: "gilroyextrabold","arial",sans-serif;
+  letter-spacing: 0.2em;
+  padding-top: 27px;
+}
+
+.paginator_btn.back {
+  margin-right: 40px;
+  text-align: left;
+  position: relative;
+  z-index: 50;
+}
+
+.paginator_btn.back:active {
+  color: #ababab;
+}
+
+.paginator_btn.back:hover::after {
+  content: "";
+  display: block;
+  height: 70px;
+  width: 127px;
+  background-color: #d9d9d9;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: -30;
+}
+
+.paginator_btn.forward {
+  margin-left: 40px;
+  text-align: right;
+  position: relative;
+  z-index: 50;
+}
+
+.paginator_btn.forward:active {
+  color: #ababab;
+}
+
+.paginator_btn.forward:hover::after {
+  content: "";
+  display: block;
+  height: 70px;
+  width: 137px;
+  background-color: #d9d9d9;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  z-index: -30;
+}
+
+.paginator_number {
+  width: 123px;
+  padding-left: 37px;
+}
+
+.paginator_number > * {
+  font-size: 16px;
+  margin-right: 32px;
+  opacity: 0.3;
+}.
+
+.paginator_number > *:nth-child(2) {
+  margin-right: 26px;
+}
+
+.paginator_number > *:hover {
+  opacity: 0.6;
+}
+
+.paginator_number > *:active {
+  opacity: 1;
+}
+
+.writeus_popup {
+  display: block;
+  width: 760px;
+  height: 360px;
+  padding: 115px 100px 78px 100px;
+  background-color: #ffffff;
+  border: 4px solid black;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 100;
+}
+
+.popup_head {
+  width: 760px;
+  margin-bottom: 37px;
+}
+
+.popup_head input {
+  width: 100%;
+  height: 50px;
+  border: none;
+  outline: none;
+  background-color: #f2f2f2;
+  padding-left: 21px;
+  padding-right: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+  font-family: "opensans","arial",sans-serif;
+}
+
+.popup_head input:hover {
+  background-color: #ebebeb;
+}
+
+.popup_head input:focus {
+  border: solid #e5e5e5 3px;
+  background-color: #ffffff;
+}
+
+.popup_name {
+  float: left;
+  width: 360px;
+  margin-right: 40px;
+}
+
+.popup_email {
+  float: left;
+  width: 360px;
+}
+
+.popup_message textarea {
+  width: 760px;
+  height: 156px;
+  padding: 20px 21px;
+  border: none;
+  outline: none;
+  overflow: none;
+  resize: none;
+  background-color: #f2f2f2;
+  font-size: 14px;
+  font-family: "opensans","arial",sans-serif;
+  box-sizing: border-box;
+}
+
+.popup_message textarea:hover {
+  background-color: #ebebeb;
+}
+
+.popup_message textarea:focus {
+  border: solid #e5e5e5 3px;
+  background-color: #ffffff;
+}
+
+.writeus label {
+  display: block;
+  font-size: 18px;
+  font-family: "gilroyextrabold","arial",sans-serif;
+  line-height: 18px;
+  margin-bottom: 13px;
+}
+
+
+
+.cross {
+
+  display: none;
+}
+
+.active {
+  opacity: 1;
 }
 
 .yellow {
   width: 260px;
   line-height: 40px;
   font-size: 18px;
+  border: none;
+  background: none;
+  outline: none;
   text-transform: uppercase;
   text-align: center;
   vertical-align: middle;;
   font-family: "gilroyextrabold","arial", sans-serif;;
   position: relative;
   display: inline-block;
+  z-index: 95;
 }
 
 .yellow_service {
@@ -1359,6 +1748,14 @@ h3 {
 .yellow_item {
   width: 200px;
   margin-bottom: 15px;
+}
+
+.yellow_filter {
+  width: 200px;
+}
+
+.yellow_popup {
+  width: 200px;
 }
 
 .yellow:active {
@@ -1382,6 +1779,10 @@ h3 {
   transition: .08s;
 }
 
+.yellow_popup::after {
+
+}
+
 .yellow:hover::after {
   height: 100%;
 }
@@ -1399,7 +1800,6 @@ h3 {
 
 @font-face {
   font-family: "gilroy";
-
   src: local ("gilroylight"),
      url("../fonts/gilroylight.woff2") format("woff2"),
      url("../fonts/gilroylight.woff") format("woff");
@@ -1409,7 +1809,6 @@ h3 {
 
 @font-face {
   font-family: "gilroyextrabold";
-  src: url("gilroyextrabold");
   src: local("gilroyextrabold"),
        url("../fonts/gilroyextrabold.woff2") format("woff2"),
        url("../fonts/gilroyextrabold.woff") format("woff");
@@ -1419,7 +1818,6 @@ h3 {
 
 @font-face {
   font-family: "opensans";
-  src: url("opensans");
   src: local("opensans"),
        url("../fonts/opensans.woff2") format("woff2"),
        url("../fonts/opensans.woff") format("woff");
@@ -1429,7 +1827,6 @@ h3 {
 
 @font-face {
   font-family: "opensanslight";
-  src: url("opensanslight");
   src: local("opensanslight"),
        url("../fonts/opensanslight.woff2") format("woff2"),
        url("../fonts/opensanslight.woff") format("woff");
