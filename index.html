@@ -3,27 +3,31 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс-Каталог</title>
+    <meta name="SKYPE_TOOLBAR" content ="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta http-equiv="x-rim-auto-match" content="none">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header>
       <div class="center">
-        <p class="logo_header">Device</p>
+        <a class="logo_header">Device</a>
         <div class="header_top" >
           <form action="/echo" method="get" class="search in_bl">
             <label class="in_bl">
-              <input type="text" placeholder="Поиск по сайту" name="search" class="search_area">
+              <input type="text" placeholder="Поиск по сайту" name="search" class="search_area" id="search">
             </label>
             <input type="button" value="Найти" class="search_btn in_bl">
           </form>
           <div class="user_block_header in_bl">
+            <input type="checkbox" id="log_check">
             <div class="login in_bl">
-              <a href="#">Войти</a>
+              <label for="log_check">Войти</label>
             </div>
             <div class="user in_bl">
               <a href="#">Валентин Петухов</a>
-              <a href="#" class="logoff">Выйти</a>
+              <label class="logoff" for="log_check">Выйти</label>
             </div>
           </div>
           <div class="compare in_bl">
@@ -35,8 +39,9 @@
         </div>
         <ul class="header_bottom">
           <li class="in_bl">
-            <p>Каталог товаров</p>
-            <div class="catalog">
+            <label for="catalog_drop">Каталог товаров</label>
+            <input type="checkbox" class="catalog_drop" id="catalog_drop">
+            <div class="drop_down_catalog">
               <ul class="in_bl">
                 <li><a href="#">Виртуальная реальность</a></li>
                 <li><a href="#">Моноподы для селфи</a></li>
@@ -59,15 +64,23 @@
     </header>
     <main class="center">
       <div class="slider">
+        <input type="radio" name="slider" class="switch_slider_input switch_slider_1" id="switch_slider_1" checked>
+        <input type="radio" name="slider" class="switch_slider_input switch_slider_2" id="switch_slider_2">
+        <input type="radio" name="slider" class="switch_slider_input switch_slider_3" id="switch_slider_3">
+        <div class="switch_slider_label">
+          <label for="switch_slider_1">1</label>
+          <label for="switch_slider_2">2</label>
+          <label for="switch_slider_3">3</label>
+        </div>
         <article class="slider_1 clearfix">
-          <a href="#" class="slider_img"><img src="img/slider_1.png" alt="8-ми метровая палка для селфи"></a>
+          <a href="#" class="slider_img"><img src="img/slider_1.png" alt="8-ми метровая палка для селфи" width="384px" height="486px"></a>
           <div class="slider_body">
             <span class="slider_number">01</span>
             <h2>Делай селфи, как Бен Стиллер!</h2>
-            <div class="slider_info">
-              <p>Самая длинная палка для селфи доступна в нашем магазине.</p>
-              <p>Восемь (Восемь, Карл) метров длиной и весом всего 5 килограмм.</p>
-            </div>
+            <p class="slider_info">
+              Самая длинная палка для селфи доступна в нашем магазине.
+              Восемь (Восемь, Карл) метров длиной и весом всего 5 килограмм.
+            </p>
             <a href="#" class="yellow yellow_slider">Подробнее</a>
             <div class="characters">
               <div class="in_bl">
@@ -86,11 +99,11 @@
           </div>
         </article>
         <article class="slider_2 clearfix">
-          <a href="#" class="slider_img"><img src="img/slider_2.png" alt="Мотивирующий фитнесс-браслет"></a>
+          <a href="#" class="slider_img"><img src="img/slider_2.png" alt="Мотивирующий фитнесс-браслет" width="345px" height="485px"></a>
           <div class="slider_body">
             <span class="slider_number">02</span>
             <h2>Худеем правильно!</h2>
-            <p>
+            <p class="slider_info">
               Мотивирующие фитнесс-браслеты помогут найти в себе силы
               не пропускать занятия и соблюдать диету
             </p>
@@ -104,11 +117,11 @@
           </div>
         </article>
         <article class="slider_3 clearfix">
-          <a href="#" class="slider_img"><img src="img/slider_3.png" alt="Квадрокоптер с лазерной пушкой"></a>
+          <a href="#" class="slider_img"><img src="img/slider_3.png" alt="Квадрокоптер с лазерной пушкой" width="526px" height="334px"></a>
           <div class="slider_body">
             <span class="slider_number">03</span>
             <h2>Порхает как бабочка, жалит как пчела</h2>
-            <p>
+            <p class="slider_info">
               Этот обычный, на первый взгляд, квадрокоптер оснащен
               мощным лазером, замаскированным под стандартную камеру.
             </p>
@@ -125,48 +138,43 @@
             </div>
           </div>
         </article>
-        <div class="slider_input">
-          <input type="radio" name="slider" id="slider_1">
-          <input type="radio" name="slider" id="slider_2">
-          <input type="radio" name="slider" id="slider_3">
-        </div>
       </div>
       <ul class="categories">
         <li class="in_bl">
-          <a href="#" class="popular_sprite in_bl">
+          <a href="catalog.html" class="popular_sprite in_bl">
             <p>Виртуальная реальность</p>
           </a>
         </li>
         <li class="in_bl">
-          <a href="#" class="popular_sprite in_bl">
+          <a href="catalog.html" class="popular_sprite in_bl">
             <p>Моноподы для селфи</p>
           </a>
         </li>
         <li class="in_bl">
-          <a href="#" class="popular_sprite in_bl">
+          <a href="catalog.html" class="popular_sprite in_bl">
             <p>Экшн-камеры</p>
           </a>
         </li>
         <li class="in_bl">
-          <a href="#" class="popular_sprite in_bl">
+          <a href="catalog.html" class="popular_sprite in_bl">
             <p>Фитнесс-браслеты</p>
           </a>
         </li>
         <li class="in_bl">
-          <a href="#" class="popular_sprite in_bl">
+          <a href="catalog.html" class="popular_sprite in_bl">
             <p>Умные часы</p>
           </a>
         </li>
         <li class="in_bl">
-          <a href="#" class="popular_sprite in_bl">
+          <a href="catalog.html" class="popular_sprite in_bl">
             <p>Квадрокоптеры</p>
           </a>
         </li>
       </ul>
       <div class="service clearfix">
-        <input type="radio" name="service" id="delivery">
-        <input type="radio" name="service" id="warranty">
-        <input type="radio" name="service" id="credit">
+        <input type="radio" name="service" class="service_switch_delivery" id="delivery" checked>
+        <input type="radio" name="service" class="service_switch_warranty" id="warranty">
+        <input type="radio" name="service" class="service_switch_credit" id="credit">
         <div class="service_name">
           <label for="delivery" class="yellow yellow_service">Доставка</label>
           <label for="warranty" class="yellow yellow_service">Гарантия</label>
@@ -214,7 +222,7 @@
           </p>
           <p>
             Мы можем доставить ваш товар в самые отдаленные точки
-            России! <span class="caps">Device</span> работает со многими транспортными компаниями
+            России! <span class="caps">Device</span> работает со многими транспортными компаниями:
           </p>
           <ul class="delivery_company">
             <li>Деловые линии</li>
@@ -228,16 +236,16 @@
           <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете
              проверить работоспособность покупки. Всякое бывает.
           </p>
-          <div class="map"><img src="img/map.jpg" alt="улица Строителей, 15"></div>
+          <div class="contacts_map"><a href="https://yandex.ru/maps"><img src="img/map.jpg" alt="улица Строителей, 15" width="560px" height="222px"></a></div>
           <a class="yellow">Напишите нам</a>
         </section>
       </div>
-      <div class="map_popupp">
+      <div class="map_popup">
         <button type="button" class="cross">Закрыть</button>
-        <img src="img/map_big.jpg" alt="улица Строителей, 15">
+        <img src="img/map_big.jpg" alt="улица Строителей, 15" width="960px" height="559px">
       </div>
       <div class="writeus_popup">
-        <button type="button" class="cross">Закрыть</button>
+        <button type="button" class="cross cross_writeus">Закрыть</button>
         <form action="/echo" method="post" class="writeus">
           <div class="popup_head clearfix">
             <fieldset class="popup_name">
@@ -260,14 +268,14 @@
     <footer>
       <div class="center">
         <div class="footer_top clearfix">
-          <p class="logo_footer">Device</p>
-          <div class="foter_chtoto">
-            <div class="user_block_footer in_bl">
+          <a class="logo_footer">Device</a>
+          <div class="footer_top_right">
+            <div class="user_block_footer index in_bl">
               <div class="login">
                 <a href="#">Войти</a>
               </div>
               <div class="user in_bl">
-                <a class="logoff">Выйти</a>
+                <a href="#" class="logoff_footer">Выйти</a>
               </div>
             </div>
             <div class="footer_compare in_bl">

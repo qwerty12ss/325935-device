@@ -3,13 +3,16 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс-Каталог</title>
+    <meta name="SKYPE_TOOLBAR" content ="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta http-equiv="x-rim-auto-match" content="none">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="catalog_header">
       <div class="center">
-        <p class="logo_header">Device</p>
+        <a href="index.html" class="logo_header">Device</a>
         <div class="header_top" >
           <form action="/echo" method="get" class="search in_bl">
             <label class="in_bl">
@@ -18,12 +21,13 @@
             <input type="button" value="Найти" class="search_btn in_bl">
           </form>
           <div class="user_block_header in_bl">
+            <input type="checkbox" id="log_check">
             <div class="login in_bl">
-              <a href="#">Войти</a>
+              <label for="log_check">Войти</label>
             </div>
             <div class="user in_bl">
               <a href="#">Валентин Петухов</a>
-              <a href="#" class="logoff">Выйти</a>
+              <label for="log_check" class="logoff">Выйти</label>
             </div>
           </div>
           <div class="compare in_bl">
@@ -35,8 +39,9 @@
         </div>
         <ul class="header_bottom">
           <li class="in_bl">
-            <p>Каталог товаров</p>
-            <div class="catalog">
+            <label for="catalog_drop">Каталог товаров</label>
+            <input type="checkbox" class="catalog_drop" id="catalog_drop">
+            <div class="drop_down_catalog">
               <ul class="in_bl">
                 <li><a href="#">Виртуальная реальность</a></li>
                 <li><a href="#">Моноподы для селфи</a></li>
@@ -66,9 +71,9 @@
       </ul>
       <div class="main_content_left">
         <form action="/echo" method="get" class="filter">
-          <h3>Фильтр</h3>
+          <h2>Фильтр:</h2>
           <fieldset class="filter_cost">
-            <legend>Стоимость</legend>
+            <h3>Стоимость</h3>
             <div class="range_filter">
              <div class="range_controls">
                <div class="scale">
@@ -84,37 +89,34 @@
             </div>
            </div>
           </fieldset>
-          <fieldset class="color">
-            <legend>Цвет</legend>
+          <fieldset class="filter_color">
+            <h3>Цвет</h3>
             <label for="black"><input type="checkbox" name="color" value="black" id="black" checked><span class="checkbox_indicator"></span>Черный</label>
             <label for="white"><input type="checkbox" name="color" value="white" id="white"><span class="checkbox_indicator"></span>Белый</label>
             <label for="blue"><input type="checkbox" name="color" value="blue" id="blue" checked><span class="checkbox_indicator"></span>Синий</label>
             <label for="red"><input type="checkbox" name="color" value="red" id="red" checked><span class="checkbox_indicator"></span>Красный</label>
             <label for="pink"><input type="checkbox" name="color" value="pink" id="pink"><span class="checkbox_indicator"></span>Розовый</label>
           </fieldset>
-          <fieldset class="bluetooth">
-            <legend>Bluetooth</legend>
+          <fieldset class="filter_bluetooth">
+            <h3>Bluetooth</h3>
             <label for="yes"><input type="radio" name="bluetooth" value="yes" id="yes" checked><span class="radio_indicator"></span>Есть</label>
             <label for="no"><input type="radio" name="bluetooth" value="no" id="no"><span class="radio_indicator"></span>Нет</label>
           </fieldset>
           <button type="submit" class="yellow yellow_filter">Показать</button>
         </form>
         <div class="main_content_right">
-          <form action="/echo" method="get" class="sort">
-            <h3 class="in_bl">Сортировка</h3>
-            <fieldset class="type in_bl">
-              <input type="radio" name="type" value="item_cost" id="item_cost" checked>
-              <label for="item_cost" class="in_bl">По цене</label>
-              <input type="radio" name="type" value="item_type" id="item_type">
-              <label for="item_type" class="in_bl">По типу</label>
-              <input type="radio" name="type" value="item_popular" id="item_popular">
-              <label for="item_popular" class="in_bl">По популярности</label>
-            </fieldset>
-            <fieldset class="order">
-              <a class="increase">inc</a>
-              <a class="decrease">dec</a>
-            </fieldset>
-          </form>
+          <div class="sort">
+            <h2 class="in_bl">Сортировка:</h2>
+            <div class="type in_bl">
+              <a href="#" class="in_bl active">По цене</a>
+              <a href="#" class="in_bl">По типу</a>
+              <a href="#" class="in_bl">По популярности</a>
+            </div>
+            <div class="order">
+              <a href="#" class="increase">inc</a>
+              <a href="#" class="decrease active">dec</a>
+            </div>
+          </div>
           <div class="price_list">
             <article class="item in_bl">
               <div class="item_image">
@@ -126,7 +128,7 @@
               </div>
               <div class="item_buy">
                 <h2 class="in_bl"><a href="#">Любительская селфи-палка</a></h2>
-                <a href="#" class="cost in_bl">500 руб.</a>
+                <a href="#" class="cost in_bl"> 500 руб.</a>
               </div>
             </article>
             <article class="item in_bl">
@@ -138,8 +140,8 @@
                 </div>
               </div>
               <div class="item_buy in_bl">
-                <h2 class="in_bl"><a href="#">Профессиональная селфи&#8209палка</a></h2>
-                <a href="#" class="cost in_bl">1500 руб.</a>
+                <h2 class="in_bl"><a href="#">Профессиональная <span class="nowrap">селфи</span>-<span class="nowrap">палка</span></a></h2>
+                <a href="#" class="cost in_bl">1 500 руб.</a>
               </div>
             </article>
             <article class="item in_bl">
@@ -171,25 +173,9 @@
                 <a href="#" class="cost in_bl">4 900 руб.</a>
               </div>
             </article>
-            <article class="item in_bl">
-              <div class="item_image">
-                <a href="#"><img src="img/item_4.jpg" alt="Селфи-палка следуй за мной"></a>
-                <div class="item_image_hover">
-                  <button class="yellow yellow_item">В корзину</button>
-                  <button class="add_compare">Добавить к стравнению</button>
-                </div>
-                <div class="new">
-                  <span>New</span>
-                </div>
-              </div>
-              <div class="item_buy">
-                <h2 class="in_bl"><a href="#">Селфи-палка "Следуй за мной"</a></h2>
-                <a href="#" class="cost in_bl">4 900 руб.</a>
-              </div>
-            </article>
           </div>
           <div class="paginator">
-            <a class="paginator_btn back in_bl">Назад</a><
+            <a class="paginator_btn back in_bl">Назад</a>
             <div class="paginator_number in_bl">
               <a class="active in_bl">1</a>
               <a href="#" class="in_bl">2</a>
@@ -203,14 +189,14 @@
     <footer>
       <div class="center">
         <div class="footer_top clearfix">
-          <p class="logo_footer">Device</p>
-          <div class="foter_chtoto">
-            <div class="user_block_footer in_bl">
+          <a href="index.html" class="logo_footer">Device</a>
+          <div class="footer_top_right">
+            <div class="user_block_footer catalog in_bl">
               <div class="login">
                 <a href="#">Войти</a>
               </div>
               <div class="user in_bl">
-                <a class="logoff">Выйти</a>
+                <a class="logoff_footer">Выйти</a>
               </div>
             </div>
             <div class="footer_compare in_bl">
