@@ -1,10 +1,9 @@
 @font-face {
   font-family: "gilroy";
-  src: url("../fonts/gilroylight.eot");
-  src: local ("gilroylight"),
+  src:
      url("../fonts/gilroylight.eot") format("embedded-opentype"),
      url("../fonts/gilroylight.woff2") format("woff2"),
-     url("../fonts/gilroylight.woff2") format("woff2"),
+     url("../fonts/gilroylight.woff") format("woff"),
      url("../fonts/gilroylight.ttf") format("ttf");
      font-weight: normal;
      font-style: normal;
@@ -12,32 +11,31 @@
 
 @font-face {
   font-family: "gilroy";
-  src: url("../fonts/gilroyextrabold.eot");
-  src: local("gilroyextrabold"),
-       url("../fonts/gilroyextrabold.eot") format("embedded-opentype"),
-       url("../fonts/gilroyextrabold.woff2") format("woff2"),
-       url("../fonts/gilroyextrabold.woff") format("woff"),
-       url("../fonts/gilroyextrabold.ttf") format("ttf");
-       font-weight: 900;
-       font-style: normal;
+  src:
+     url("../fonts/gilroyextrabold.eot") format("embedded-opentype"),
+     url("../fonts/gilroyextrabold.woff2") format("woff2"),
+     url("../fonts/gilroyextrabold.woff") format("woff"),
+     url("../fonts/gilroyextrabold.ttf") format("ttf");
+     font-weight: 900;
+     font-style: normal;
 }
 
 @font-face {
   font-family: "opensans";
-  src: local("opensans"),
-       url("../fonts/opensans.woff2") format("woff2"),
-       url("../fonts/opensans.woff") format("woff");
-       font-weight: normal;
-       font-style: normal;
+  src:
+     url("../fonts/opensans.woff2") format("woff2"),
+     url("../fonts/opensans.woff") format("woff");
+     font-weight: normal;
+     font-style: normal;
 }
 
 @font-face {
   font-family: "opensans";
-  src: local("opensanslight"),
-       url("../fonts/opensanslight.woff2") format("woff2"),
-       url("../fonts/opensanslight.woff") format("woff");
-       font-weight: 300;
-       font-style: normal;
+  src:
+     url("../fonts/opensanslight.woff2") format("woff2"),
+     url("../fonts/opensanslight.woff") format("woff");
+     font-weight: 300;
+     font-style: normal;
 }
 
 @keyframes burst {
@@ -136,7 +134,7 @@ body {
   margin-bottom: 23px;
   margin-left: 59px;
   font-size: 48px;
-  font-family: "gilroy", "Arial", sans-serif;
+  font-family: "gilroy", "arial", sans-serif;
   font-weight: 900;
   text-transform: uppercase;
   display: block;
@@ -162,7 +160,7 @@ body {
   width: 1040px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 30.5px;
+  margin-bottom: 16.5px;
   font-size: 0px;
   font-family: "opensans", "Arial", sans-serif;
   font-weight: 300;
@@ -179,8 +177,8 @@ body {
 }
 
 .search {
-  min-height: 33.5px;
   width: 440px;
+  padding-bottom: 14px;
   font-size: 15px;
   margin-right: 100px;
   position: relative;
@@ -199,23 +197,17 @@ body {
   }
 
 .search_area {
+  width: 319px;
   border: 0;
   padding-left: 39px;
+  padding-bottom: 15px;
   background: none;
   position: relative;
+  border-bottom: 2px solid #f7e296;
 }
 
 .search_area:focus {
   outline: none;
-}
-
-.search_area::after {
-  content: "";
-  display: block;
-  width: 440px;
-  height: 2px;
-  background-color: #000000;
-
 }
 
 .search_btn {
@@ -230,7 +222,16 @@ body {
   position: absolute;
   right: -2px;
   top: -13px;
-  display: none;
+  display: block;
+  opacity: 0;
+}
+
+.search_area:focus {
+  border-bottom: 2px solid #000000;
+}
+
+.search_area:focus + .search_btn {
+  opacity: 1;
 }
 
 .search_btn:hover {
@@ -1109,7 +1110,8 @@ li:nth-child(6) .popular_sprite::before{
   margin-bottom: 63px;
   padding-left: 0px;
   font-family: "gilroy", "arial", sans-serif;
-  font-family: 900;
+  font-weight:  900;
+  color: #000000;
   list-style-type: none;
 }
 
@@ -1171,6 +1173,7 @@ li:nth-child(6) .popular_sprite::before{
   text-transform: uppercase;
   font-family: "gilroy","arial",sans-serif;
   font-weight: 900;
+  cursor: pointer;
 }
 
 .footer_catalog .logo_footer {
