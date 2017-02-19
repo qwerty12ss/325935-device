@@ -2489,6 +2489,12 @@ fieldset {
   background-color: #000000;
 }
 
+.iframe_index {
+  width: 960px;
+  height: 559px;
+  border: 0;
+}
+
 .nowrap {
   white-space: nowrap;
 }
